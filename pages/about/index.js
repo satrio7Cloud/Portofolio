@@ -141,7 +141,7 @@ const About = () => {
             exit="hidden"
             className="max-2-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            Hello, I'm Satrio, a Full Stack Developer with a great passion for
+            Hello, Im Satrio, a Full Stack Developer with a great passion for
             creating innovative and high-quality web solutions. I am very
             passionate about exploring the world of technology and continuing to
             learn to keep up with the latest developments in the industry.
