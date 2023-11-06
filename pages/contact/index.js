@@ -17,7 +17,6 @@ const Contact = () => {
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
       message
     )}`;
-
     window.open(url, "_blank");
   };
 
@@ -34,7 +33,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 text-center mb-12"
           >
-            Let's <span className="text-accent">connect.</span>
+            Lets <span className="text-accent">connect.</span>
           </motion.h2>
           {/* form */}
           <motion.form
@@ -42,7 +41,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto "
+            className="flex-1 flex flex-col gap-6 w-full mx-auto"
           >
             {/*input group */}
             <div className="flex gap-x-6 w-full ">
@@ -60,7 +59,7 @@ const Contact = () => {
                 className="group-hover:-translate-y-[120%] 
                 group-hover:opacity-0 transition-all duration-500"
               >
-                Let's talk
+                Lets talk
               </span>
               <BsArrowRight
                 className="-translate-y-[120%] opacity-0 group-hover:flex 
