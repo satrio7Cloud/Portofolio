@@ -1,58 +1,36 @@
-import React from 'react';
-
-// import swiper react component
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-
-// icons
 import {
-  RxCrop,
   RxDesktop,
   RxPencil2,
-  RxReader,
   RxRocket,
   RxArrowTopRight,
   RxAccessibility
 } from 'react-icons/rx';
-
-// import require modules 
 import { FreeMode, Pagination } from 'swiper';
 
-// service data
 export const serviceData = [
-  // {
-  //   icon: <RxCrop />,
-  //   title: 'Branding',
-  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  // },
   {
     icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Database Design and Optimization',
+    title: 'System Design',
+    description: 'Design and architect backend systems with scalability, modularity, and maintainability in mind.',
   },
-  {
+   {
     icon: <RxDesktop />,
-    title: 'Web Development',
-    description: 'build complex web applications',
+    title: 'Web App Development',
+    description: 'Develop backend APIs and full-stack web apps using Node.js, Express, PostgreSQL, and RESTful architecture.',
   },
-  // {
-  //   icon: <RxReader />,
-  //   title: 'Copywriting',
-  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  // },
   {
     icon: <RxRocket />,
-    title: 'Testing and Debugging',
-    description: 'perform thorough testing and debugging',
+    title: 'Performance & Security',
+    description: 'Implement caching, logging, rate limiting, and secure authentication using JWT, RBAC, etc.',
   },
   {
-    icon: <RxAccessibility   />,
-    title: 'Social Media Integration',
-    description: 'integrate your social media accounts with your website',
+    icon: <RxAccessibility />,
+    title: 'Integration & Automation',
+    description: 'Integrate with external APIs (e.g., payment gateways) and automate workflows across services.',
   },
 ];
 
@@ -82,7 +60,7 @@ const ServiceSlider = () => {
           serviceData.map((item,index) => {
             return (
               <SwiperSlide key={index}>
-              <div className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex
+              <div className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-10 py-10 flex
                sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'>
                 {/* icon */}
                 <div className='text-4xl text-accent mb-4 '>{item.icon}</div>

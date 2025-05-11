@@ -1,14 +1,23 @@
 import React, { useState } from "react";
-
-// icons
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
-
 import {
-  SiNextdotjs,
-  SiFramer,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaJava,
+  FaPhp,
+  FaAngular,
+  FaChartLine,
+  FaDocker,
+  FaFigma,
+  FaProjectDiagram,
+  FaLaptopCode,
+} from "react-icons/fa/index.js";
+import {
   SiAdobexd,
   SiAdobephotoshop,
-} from "react-icons/si";
+  SiPostgresql,
+  SiGo,
+} from "react-icons/si/index.js";
 
 //  about data
 export const aboutData = [
@@ -16,14 +25,28 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
+        title: "Backend Development",
         icons: [
-          <FaHtml5 key="html5" />,
-          <FaCss3 key="css3" />,
-          <FaJs key="js" />,
-          <FaReact key="react" />,
-          <SiNextdotjs key="next" />,
-          <SiFramer key="framer" />,
+          <FaPhp key="php" />,
+          <FaJava key="java" />,
+          <FaJs key="javascript" />,
+          <FaNodeJs key="node" />,
+          <SiPostgresql key="postgresql" />,
+          <FaDocker key="docker" />,
+          <SiGo key="golang" />, 
+        ],
+      },
+      {
+        title: "Frontend Development",
+        icons: [<FaReact key="react" />, <FaAngular key="angular" />],
+      },
+      {
+        title: "Authentication & Architecture",
+        icons: [
+          <FaFigma key="figma" />,
+          <SiAdobexd key="adobexd" />,
+          <SiAdobephotoshop key="adob" />,
+          <FaChartLine key="chartjs" />,
         ],
       },
       {
@@ -32,6 +55,7 @@ export const aboutData = [
           <FaFigma key="figma" />,
           <SiAdobexd key="adobexd" />,
           <SiAdobephotoshop key="adob" />,
+          <FaChartLine key="chartjs" />,
         ],
       },
     ],
@@ -40,16 +64,26 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI - Freelance",
-        stage: "2020",
+        title: "Software Engineer - Carik Mandiri (DKI Jakarta)",
+        stage: "Sep 2023 - Feb 2025",
+        icon: <FaProjectDiagram key="carik" />,
       },
       {
-        title: "Web Developer - Freelance",
-        stage: "2021 ",
+        title:
+          "Software Engineer - Cooperative System (Mitra Sejahtera Digital)",
+        stage: "Jul 2022 - Aug 2023",
+        icon: <FaLaptopCode key="koperasi" />,
       },
       {
-        title: "Web Developer - Freelance Projects",
-        stage: "2022",
+        title: "Software Engineer - School Payment Tracker (EduTech Nusantara)",
+        stage: "Jul 2021 - Jun 2022",
+        icon: <FaLaptopCode key="edutech" />,
+      },
+      {
+        title:
+          "Software Engineer - Smart Attendance System (Karya Digital Mandiri)",
+        stage: "Apr 2020 - May 2021",
+        icon: <FaLaptopCode key="hris" />,
       },
     ],
   },
@@ -58,7 +92,7 @@ export const aboutData = [
     info: [
       {
         title: "STMIK JAKARTA STI&K ",
-        stage: "2020 - 2024",
+        stage: "2021 - 2025",
       },
     ],
   },
@@ -75,21 +109,22 @@ export const aboutData = [
       },
     ],
   },
-  // {
-  //   title: "Vision and Goals",
-  //   info: [
-  //     {
-  //       title: "Technological Innovation",
-  //       stage:
-  //         "change in the world of technology by developing innovative solutions that solve real problems.",
-  //     },
-  //     {
-  //       title: "Building Quality Products:",
-  //       stage:
-  //         "Mention high-quality products and services that help clients achieve their goals.",
-  //     },
-  //   ],
-  // },
+ {
+  title: "Vision and Goals",
+  info: [
+    {
+      title: "Innovative Problem Solving",
+      stage:
+        "Drive positive change through technology by building scalable and high-performance systems that solve real-world problems.",
+    },
+    {
+      title: "Delivering Impactful Solutions",
+      stage:
+        "Develop high-quality digital products and services that empower clients and institutions to achieve their operational and strategic goals.",
+    },
+  ],
+}
+
 ];
 
 // components
@@ -116,7 +151,7 @@ const About = () => {
         exit="hidden"
         className="hidden xl:flex absolute bottom-0 -left-[370px]"
       >
-        <Avatar />
+        {/* <Avatar /> */}
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
@@ -128,8 +163,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent design.
+            Hey, I'm a <span className="text-accent">Full Stack Developer</span>{" "}
+            who loves building cool stuff for the web.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -138,10 +173,9 @@ const About = () => {
             exit="hidden"
             className="max-2-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            Hello, Im Satrio, a Full Stack Developer with a great passion for
-            creating innovative and high-quality web solutions. I am very
-            passionate about exploring the world of technology and continuing to
-            learn to keep up with the latest developments in the industry.
+            Hi there! I'm Satrio — a web developer who enjoys turning ideas into
+            awesome digital experiences. I'm always curious about new tech and
+            love learning things that help me create better websites and apps.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -155,7 +189,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={2} duration={5} /> +
+                  <CountUp start={0} end={4} duration={6} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -192,7 +226,6 @@ const About = () => {
           </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
-              console.log(itemIndex);
               return (
                 <div
                   key={itemIndex}
@@ -200,19 +233,22 @@ const About = () => {
               gap-x-2 items-center text-white/60"
                 >
                   {/* title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      console.log(icon);
-                      return (
-                        <div key={itemIndex} className="text-2xl text-white">
-                          {icon}
-                        </div>
-                      );
-                    })}
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
+                    <div className="font-light">{item.title}</div>
+
+                    <div className="hidden md:flex text-white">-</div>
+
+                    <div className="text-sm text-gray-300">{item.stage}</div>
+
+                    {item.icons && (
+                      <div className="flex gap-x-3">
+                        {item.icons.map((icon, itemIndex) => (
+                          <div key={itemIndex} className="text-2xl text-white">
+                            {icon}
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               );

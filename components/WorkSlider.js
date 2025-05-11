@@ -1,16 +1,12 @@
-// import swiper react component
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// import swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-// import require modules
 import { Pagination } from "swiper";
 
 // icon
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs/index.js";
 
 // next image
 import Image from "next/image";
@@ -21,39 +17,19 @@ const workSlides = {
       images: [
         {
           title: "title",
-          path: "/photos-1.png",
+          path: "/photoss-1.png",
         },
         {
           title: "title",
-          path: "/photos-2.png",
+          path: "/photoss-2.png",
         },
         {
           title: "title",
-          path: "/photos-3.png",
+          path: "/photoss-3.png",
         },
         {
           title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
+          path: "/photoss-4.png",
         },
       ],
     },
@@ -93,18 +69,6 @@ const WorkSlider = () => {
                         className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20
                           transition-all duration-300"
                       >
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          {/* title part 1 */}
-                          <div className="delay-100">LIVE</div>
-                          {/* title part 2 */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                            PROJECT
-                          </div>
-                          {/* icon */}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                            <BsArrowRight />
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>

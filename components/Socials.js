@@ -1,17 +1,9 @@
-// links
 import Link from "next/link";
-
-// icons
 import {
-  RiYoutubeLine,
   RiInstagramLine,
-  RiFacebookBoxLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
+  RiWhatsappLine
 } from "react-icons/ri";
-
-import { RxLinkedinLogo, RxGithubLogo, RxEnvelopeClosed } from "react-icons/rx";
+import { RxLinkedinLogo, RxGithubLogo, RxDownload, RxEnvelopeClosed } from "react-icons/rx";
 
 const Socials = () => {
   return (
@@ -40,21 +32,21 @@ const Socials = () => {
       >
         <RxEnvelopeClosed />
       </Link>
-      {/* <Link href={''} className="hover:text-accent transition-all duration-300">
-      <RiYoutubeLine />
-    </Link>
-    <Link href={''} className="hover:text-accent transition-all duration-300">
-      <RiFacebookBoxLine />
-    </Link>
-    <Link href={''} className="hover:text-accent transition-all duration-300">
-      <RiDribbbleLine />
-    </Link>
-    <Link href={''} className="hover:text-accent transition-all duration-300">
-      <RiBehanceLine />
-    </Link>
-    <Link href={''} className="hover:text-accent transition-all duration-300">
-      <RiPinterestLine />
-    </Link> */}
+      <Link
+        href="https://wa.me/6285156419062"
+        className="hover:text-accent transition-all duration-300"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <RiWhatsappLine />
+      </Link>
+       <Link
+        href="/satrio-cv.pdf"
+        download
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RxDownload />
+      </Link>
     </div>
   );
 };

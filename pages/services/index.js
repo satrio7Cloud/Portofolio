@@ -22,7 +22,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8"
             >
-              My Services <span className="text-accent">.</span>
+            Services <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -31,9 +31,10 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              I am a Full Stack Developer dedicated to providing complete
-              end-to-end web solutions. With extensive experience in front-end
-              and back-end development, Im ready to help you deliver successful
+              I specialize in backend development, microservices architecture,
+              and building scalable systems. From API development to real-time 
+              data processing and secure authentication, I help organizations 
+              build reliable, high-performance digital products.
               web projects.
             </motion.p>
           </div>
